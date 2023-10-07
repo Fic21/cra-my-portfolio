@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body{
+        @apply  bg-[#fafafa] overflow-x-hidden;
+    }
+    h1 {
+      @apply hp:text-2xl tablet:text-4xl laptop:text-5xl italic font-extrabold;
+    }
+    h2 {
+      @apply hp:text-sm tablet:text-xl laptop:text-2xl drop-shadow-2xl;
+    }
+    p{
+      @apply hp:text-[12px] tablet:text-[16px] laptop:text-[18px] italic ;
+    }
+    ul{
+      @apply hp:text-[12px] tablet:text-[16px] laptop:text-[23px] ;
+    }
+
+   
+  }

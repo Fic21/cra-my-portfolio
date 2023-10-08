@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "title":"IoT Project",
+        "content":"Project ini adalah sistem keamanan kendaran bermotor. Berfungsi untuk monitoring posisi kendaraan bermotor serta fungsi remote jarak jauh berbasis web.",
+        "img":"iot project.png"    
+    },
+    {
+        "id":2,
+        "title":" Web DTS 2020",
+        "content":"Membangun Project Web untuk keperluan syarat lulus DTS 2020 HTML ,CSS dan Js. Lalu pada saat itu saya di percayai teman satu tim untuk jadi ketua tim sehingga bisa sukses lulus.",
+        "img":"WebDTS20.png" 
+    },
+    {
+        "id":3,
+        "title":" Android Dev 2021",
+        "content":"Project akhir syarat lulus DTS PROA Android Developer Kotlin. Aplikasi yang dibuat adalah aplikasi android Github User yang bisa mencari data pengguna Github melalui API Github.",
+        "img":"androiddev.svg"
+    },
+    {
+        "id":4,
+        "title":"Project Web Dicoding 2023",
+        "content":"Project bebas membangun Web Responsive menggunakan HTML dan CSS salah satu syarat lulus pelatihan dicoding dasar pemograman WEB.",
+        "img":"WebDicoding.png"
+    }
+]

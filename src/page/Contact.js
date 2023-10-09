@@ -1,12 +1,20 @@
-import React, { useRef } from "react";
+import React, { useRef,useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import { Button, Input, Textarea } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
+import { AlertCustomStyles } from "../components/Alertcustom";
 
 
 const Contact = () => {
+  //kiri getter
+  //kanan setter
+
+  const [stateAlert,setstateAlert] = useState();
+
+  
+
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -21,6 +29,7 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log("message send");
+          setstateAlert(<AlertCustomStyles/>)
         },
         (error) => {
           console.log(error.text);
@@ -38,7 +47,11 @@ const Contact = () => {
       >
         <h1 className="flex justify-center drop-shadow-lg ">My Contact</h1>
         <div className="flex justify-center mt-5   ">
-          <form ref={form} onSubmit={sendEmail} className="form bg-[#f0f0f0] my-10 p-10 rounded-2xl drop-shadow-lg">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="form bg-[#f0f0f0] my-10 p-10 rounded-2xl drop-shadow-lg"
+          >
             <div className="flex hp:flex-col tablet:flex-row laptop:flex-row gap-3">
               <Input color="indigo" label="Your name" name="user_name" />
               <Input colot="indigo" label="Your email" name="email_name" />
@@ -47,11 +60,12 @@ const Contact = () => {
               <div className="mt-3">
                 <Textarea color="indigo" label="Your Message" name="message" />
               </div>
-              <div className="mt-3 flex justify-center">
+              <div className="mt-3 flex justify-center mb-4">
                 <Button type="submit" value="Send">
                   Send Message
                 </Button>
               </div>
+              {stateAlert}
             </div>
           </form>
         </div>

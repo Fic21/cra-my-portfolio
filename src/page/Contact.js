@@ -11,7 +11,14 @@ const Contact = () => {
   //kiri getter
   //kanan setter
 
-  const [stateAlert,setstateAlert] = useState();
+  const [stateAlert,setstateAlert] = useState(false);
+
+  const notif = () => {
+    setstateAlert(true);
+    setTimeout(()=>{
+    setstateAlert((q)=>!q);
+    },2000)
+  }
 
   
 
@@ -29,7 +36,7 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log("message send");
-          setstateAlert(<AlertCustomStyles/>)
+          notif();
         },
         (error) => {
           console.log(error.text);
@@ -46,7 +53,7 @@ const Contact = () => {
         className=" bg-slate-600 pt-[60px] pb-[10px]"
       >
         <h1 className="flex justify-center drop-shadow-lg ">My Contact</h1>
-        <div className="flex justify-center mt-5   ">
+        <div className="flex justify-center mt-5">
           <form
             ref={form}
             onSubmit={sendEmail}
@@ -65,9 +72,11 @@ const Contact = () => {
                   Send Message
                 </Button>
               </div>
-              {stateAlert}
             </div>
           </form>
+          {stateAlert?<AlertCustomStyles/>:""} 
+
+
         </div>
       </motion.div>
     </section>

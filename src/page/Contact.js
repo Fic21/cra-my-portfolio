@@ -73,8 +73,8 @@ const Contact = () => {
                 </Button>
               </div>
             </div>
+            {stateAlert?<AlertCustomStyles/>:""} 
           </form>
-          {stateAlert?<AlertCustomStyles/>:""} 
 
 
         </div>
